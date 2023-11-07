@@ -34,7 +34,7 @@ public class Post extends Timestamped{
     private String password;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "users_id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)

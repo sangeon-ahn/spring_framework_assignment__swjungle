@@ -22,7 +22,7 @@ public class Comment extends Timestamped {
     private String contents;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "users_id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)

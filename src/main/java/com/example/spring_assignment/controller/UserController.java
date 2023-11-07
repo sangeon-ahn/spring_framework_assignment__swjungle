@@ -34,6 +34,7 @@ public class UserController {
     }
 
     // 3. 회원 가입 API
+    @ResponseBody
     @PostMapping("/signup")
     public ResponseEntity<Message> signup(@RequestBody @Valid SignupRequestDto signupRequestDto) {
         String result = userService.signup(signupRequestDto);
